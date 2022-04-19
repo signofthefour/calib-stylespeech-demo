@@ -1,0 +1,353 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Calib-StyleSpeech: A Zero-shot Approach In Voice Cloning Of High Adaptive Text To Speech System With Imbalanced Dataset</title>
+      <link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+      <link rel="icon" href="assets/imgs/icon.png">
+      
+      <script>
+         function play(path) {{
+           var player = document.getElementById('player');
+           player.src = path;
+           player.play();
+         }}
+      </script>
+      <style>
+         .audio-cell {
+         /* Center audio widgets in the table cell. */
+         text-align: center;
+         padding-bottom: 1px;
+         padding-top: 1px;
+         }
+         .audio-cell-padded {
+         text-align: center;
+         padding-bottom: 10px;
+         padding-top: 10px;
+         }
+         .audio-header {
+         /* Don't wrap header text. */
+         white-space: nowrap;
+         /* Some breaking space between headers for readability. */
+         padding-right: 1px;
+         padding-left: 1px;
+         }
+         .reference-cell {
+         /* For uniformity and to wrap long reference text, limit the reference cell's width. */
+         width: 25%;
+         padding-top: 20px;
+         padding-bottom: 20px;
+         }
+         .sample audio {
+         vertical-align: middle;
+         padding-left: 3px;
+         padding-right: 3px;
+         }
+         .round-button {
+         box-sizing: border-box;
+         display:block;
+         width:30px;
+         height:30px;
+         padding-top: 8px;
+         padding-left: 3px;
+         line-height: 6px;
+         border: 1.2px solid #000;
+         border-radius: 50%;
+         color: #000;
+         text-align:center;
+         background-color: rgba(0,0,0,0.00);
+         font-size:6px;
+         box-shadow: 0px 0px 2px rgba(0,0,0,1);
+         transition: all 0.2s ease;
+         }
+         .round-button:hover {
+         background-color: rgba(0,0,0,0.0);
+         box-shadow: 0px 0px 4px rgba(0,0,0,1);
+         }
+         .round-button:active {
+         background-color: rgba(0,0,0,0.01);
+         box-shadow: 0px 0px 1px rgba(0,0,0,1);
+         }
+      </style>
+   </head>
+   <body>
+     <div class="main">
+       
+      <div style="background-color: #fff; padding-top: 5%; padding-bottom: 5%;">
+         <article>
+            <header>
+               <h1 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 28pt; text-align: center;">Calib-StyleSpeech: A Zero-shot Approach In Voice Cloning Of High Adaptive Text To Speech System With Imbalanced Dataset</h1>
+               <p style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: 28pt; text-align: center; font-size: medium;"><b>Authors</b>: Nguyen Tan Dat, Lam Quang Tuong, Nguyen Duc Dung</p>
+            </header>
+         </article>
+      <table style="margin-left:auto;margin-right:auto;">
+      <tbody>
+         <tr>
+            <td>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</td>
+            <td>
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Paper on Arxiv:</b> <a href="comming soon">comming soon</a>.</p>
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Official open-sourced implementation:</b> <a href="comming soon">comming soon</a>.</p>
+               <br>
+
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> <a href="https://github.com/jik876/hifi-gan">HiFi-GAN</a> is used as vocoder. We trained this HiFi-GAN with our dataset of 2 standard voice for TTS for 425000 steps. Also, listen to the audios using headphones for better experience.</p>
+               <br>
+
+               <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">Abstract</h2>
+               
+               <p style="color:rgb(161, 161, 161); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Voiced by our Grad-TTS model:</p>
+               <audio controls=""> <source src="assets/abstract.wav"> </audio>
+               <br><br>
+               <object data="assets/imgs/CalibratedStyleSpeech.svg" width="600" height="600" class="center"> </object>
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">In this article, we propose Calib-StyleSpeech, a novel end-to-end Text-to-Speech (TTS) system, which achieves a Zero-shot learning approach in cloning a new voice without using the meta-learning method. Our model uses a block to extract the style from the reference mel-spectrogram, embedding this style vector into the acoustic model to condition the hidden features. And then, training it with a multi-speaker dataset that still contains noise and resonant utterances. We also extract a content vector from this mel-spectrogram simultaneously with the style vector. This vector will imitate the hidden vector extracted from the phoneme sequence by the encoder of the acoustic model. The extracted content vector takes responsibility on calibrate the style vector by the Mutual Information (MI) constraint in order to eliminate the dependency between content and style representation space. Calib-StyleSpeech can synthesize a high fidelity voice with only 36 utterances (about 3 minutes) in training data. Furthermore, the experimental results prove that model can learn to speak in a new voice with only one small reference record (about 5 seconds) of the target voice without any fine-tune stage and get a competitive similarity score with another state-of-the-art while maintaining naturalness and intelligence.</p>
+               <br><br>
+               
+               <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">Illustration of mel-spectrogram and audio for seen speaker in training phase:</h2>
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> Calib-StyleSpeech model is considered. In this section we show the result of our proposed model after 400k training steps on seen voice.</p>
+               <br>
+               <p><b style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Text:</b> <span class="text_e2e">Here are the match lineups for the Colombia Haiti match.</span></p>
+               <audio controls=""> <source src="assets/test/50.wav"> </audio>
+               <br>
+               <img src="assets/imgs/reverse_diffusion.gif" width="600px" class="center">
+               <table style="margin-left:auto;margin-right:auto;" align="center">
+                  <tbody>
+                     <tr>
+                        <td style="text-align: left; color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Decoder state</b></td>
+                        <td style="text-align: center; color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" align="center"><b>Mel-spectrogram sample</b></td>
+                        <td style="text-align: center; color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" align="center"><b>Vocoded audio</b></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Encoder outputs (mean of terminal distribution)</td>
+                        <td align="center"><img src="assets/test/enc.png" width="400px"></td>
+                        <td align="center"><audio controls=""> <source src="assets/test/enc.wav"> </audio></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">After sampling from terminal distribution</td>
+                        <td align="center"><img src="assets/test/0.png" width="400px"></td>
+                        <td align="center"><audio controls=""> <source src="assets/test/0.wav"> </audio></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">After 10 iterations</td>
+                        <td align="center"><img src="assets/test/10.png" width="400px"></td>
+                        <td align="center"><audio controls=""> <source src="assets/test/10.wav"> </audio></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">After 20 iterations</td>
+                        <td align="center"><img src="assets/test/20.png" width="400px"></td>
+                        <td align="center"><audio controls=""> <source src="assets/test/20.wav"> </audio></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">After 30 iterations</td>
+                        <td align="center"><img src="assets/test/30.png" width="400px"></td>
+                        <td align="center"><audio controls=""> <source src="assets/test/30.wav"> </audio></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">After 40 iterations</td>
+                        <td align="center"><img src="assets/test/40.png" width="400px"></td>
+                        <td align="center"><audio controls=""> <source src="assets/test/40.wav"> </audio></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">After 50 iterations</td>
+                        <td align="center"><img src="assets/test/50.png" width="400px"></td>
+                        <td align="center"><audio controls=""> <source src="assets/test/50.wav"> </audio></td>
+                     </tr>
+                  </tbody>
+               </table>
+               <br><br>
+               
+               
+               <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">Comparison of generalized DPM vs. standard DPM:</h2>
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Our generalized DPM framework, where we use text encoder outputs <i>µ</i> as mean of decoder terminal distribution, results in the lower number of reverse diffusion steps (number of backward ODE solver iterations) necessary for high-quality mel-spectrogram generation. To show the difference we trained additional Grad-TTS model reconstructing mels from standard normal terminal distribution <i>N</i>(0, <i>I</i>).</p>
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> Grad-TTS decoder neural network, which models gradients of data log-density, is still conditioned on text encoder outputs for both models.</p>
+               <br>
+               <table style="margin-left:auto;margin-right:auto;">
+                  <tbody>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap><b>Text:</b></td>
+                        <td align="center"><span class="text_e2e">Does the quick brown fox jump over the lazy dog?</span></td>
+                        <td align="center"><span class="text_e2e">There were others less successful.</span></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS-10 with <i>N</i>(<i>µ</i>, <i>I</i>)</td>
+                        <td align="center"> <audio controls=""> <source src="assets/generalized_vs_standard/grad_tts_m_10_1.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/generalized_vs_standard/grad_tts_m_10_2.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS-10 with <i>N</i>(0, <i>I</i>)</td>
+                        <td align="center"> <audio controls=""> <source src="assets/generalized_vs_standard/grad_tts_0_10_1.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/generalized_vs_standard/grad_tts_0_10_2.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS-20 with <i>N</i>(0, <i>I</i>)</td>
+                        <td align="center"> <audio controls=""> <source src="assets/generalized_vs_standard/grad_tts_0_20_1.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/generalized_vs_standard/grad_tts_0_20_2.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS-50 with <i>N</i>(0, <i>I</i>)</td>
+                        <td align="center"> <audio controls=""> <source src="assets/generalized_vs_standard/grad_tts_0_50_1.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/generalized_vs_standard/grad_tts_0_50_2.wav"> </audio> </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <br><br>
+               
+               <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">Sampling mel-spectrograms with different temperature:</h2>
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> Grad-TTS-10 model is considered.</p>
+               <br>
+               <table style="margin-left:auto;margin-right:auto; table-layout: fixed;">
+                  <tbody>
+                     <tr>
+                        <td>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</td>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap><b>Text:</b></td>
+                        <td align="center"><span class="text_e2e" style="word-wrap: break-word;">It was said in last year's Democratic platform.</span></td>
+                        <td align="center"><span class="text_e2e" style="word-wrap: break-word;">When he appeared before the Commission, Michael Paine lifted the blanket.</span></td>
+                        <td>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</td>
+                     </tr>
+                     <tr>
+                        <td>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</td>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>𝜏 = 1.0⠀⠀</td>
+                        <td align="center"> <audio controls=""> <source src="assets/temperature/1.0/03.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/temperature/1.0/06.wav"> </audio> </td>
+                        <td>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</td>
+                     </tr>
+                     <tr>
+                        <td>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</td>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>𝜏 = 1.5⠀⠀</td>
+                        <td align="center"> <audio controls=""> <source src="assets/temperature/1.5/03.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/temperature/1.5/06.wav"> </audio> </td>
+                        <td>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</td>
+                     </tr>
+                     <tr>
+                        <td>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</td>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>𝜏 = 3.0⠀⠀</td>
+                        <td align="center"> <audio controls=""> <source src="assets/temperature/3.0/03.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/temperature/3.0/06.wav"> </audio> </td>
+                        <td>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <br><br>
+               
+               <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">Controllable speech tempo:</h2>
+               <p><b style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Text:</b> <span class="text_e2e">Scientists at the CERN laboratory say they have discovered a new particle.</span></p>
+               <br>
+               <table style="margin-left:auto;margin-right:auto;">
+                  <tbody>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: right;">1.5×</td>
+                        <td> <audio controls=""> <source src="assets/tempo/0-5.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: right;">1.25×</td>
+                        <td> <audio controls=""> <source src="assets/tempo/0-75.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: right;">1×</td>
+                        <td> <audio controls=""> <source src="assets/tempo/1-0.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: right;">0.75×</td>
+                        <td> <audio controls=""> <source src="assets/tempo/1-25.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: right;">0.5×</td>
+                        <td> <audio controls=""> <source src="assets/tempo/1-5.wav"> </audio> </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <br><br>
+
+               <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">Examples from MOS evaluation:</h2>
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> Typically, only one model of Grad-TTS is trained. In the notation of Grad-TTS-N letter N corresponds to the overall number of timesteps used during inference to synthesize samples. The more is N the more accurate reverse diffusion trajectories are supposed to be restored resulting in better sound quality.</p>
+               <br>
+               <table style="margin-left:auto;margin-right:auto;">
+                  <tbody>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap><b>Text:</b></td>
+                        <td><span class="text_e2e">In all these lines the facts are drawn together by a strong thread of unity.</span></td>
+                        <td><span class="text_e2e">After the construction and action of the machine had been explained, the doctor asked the governor what kind of men he had commanded at Goree.</span></td>
+                        <td><span class="text_e2e">After a few years of active exertion the Society was rewarded by fresh legislation.</span></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Ground truth</td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/01.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/03.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/05.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS-4</td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/01_grad-tts-4.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/03_grad-tts-4.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/05_grad-tts-4.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS-10</td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/01_grad-tts-10.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/03_grad-tts-10.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/05_grad-tts-10.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS-100</td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/01_grad-tts-100.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/03_grad-tts-100.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/05_grad-tts-100.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Grad-TTS-1000</td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/01_grad-tts-1000.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/03_grad-tts-1000.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/05_grad-tts-1000.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap><a href="https://github.com/jaywalnut310/glow-tts">Glow-TTS</a></td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/01_glow-tts.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/03_glow-tts.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/05_glow-tts.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap><a href="https://github.com/NVIDIA/tacotron2">Tacotron2</a></td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/01_taco2.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/03_taco2.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/05_taco2.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap><a href="https://github.com/xcmyz/FastSpeech">FastSpeech</a></td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/01_fastspeech.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/03_fastspeech.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/mos/05_fastspeech.wav"> </audio> </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <br><br>
+
+               <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">End-to-end pipeline synthesis:</h2>
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> we present results of our preliminary work, which is in progress.</p>
+               <br>
+               <table style="margin-left:auto;margin-right:auto;">
+                  <tbody>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap><b>Text:</b></td>
+                        <td><span class="text_e2e">Does the quick brown fox jump over the lazy dog?</span></td>
+                        <td><span class="text_e2e">And my soul from out that shadow that lies floating on the floor shall be lifted nevermore!</span></td>
+                        <td><span class="text_e2e">He had a private jet with three king-size beds, expensive rugs, porcelain vases and a dining area.</span></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>E2E-Grad-TTS</td>
+                        <td align="center"> <audio controls=""> <source src="assets/e2e/0.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/e2e/1.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/e2e/2.wav"> </audio> </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <br>
+            </td>
+            <br>
+
+            <td>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</td>
+         </tr>
+      </tbody>
+      </table>
+      
+
+     </div>
+   </body>
+</html>
