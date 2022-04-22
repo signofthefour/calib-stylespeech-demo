@@ -91,12 +91,12 @@
                <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> <a href="https://github.com/jik876/hifi-gan">HiFi-GAN</a> is used as vocoder. We trained this HiFi-GAN with our dataset of 2 standard voice for TTS for 425000 steps. Also, listen to the audios using headphones for better experience.</p>
                <br>
 
+               <object data="assets/imgs/CalibratedStyleSpeech.svg" width="600" height="600" class="center"> </object>
                <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">Abstract</h2>
                
-               <p style="color:rgb(161, 161, 161); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Voiced by our Grad-TTS model:</p>
+               <p style="color:rgb(161, 161, 161); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Voiced by our Calib-StyleSpeech model using HiFi-GAN vocoder:</p>
                <audio controls=""> <source src="assets/abstract.wav"> </audio>
                <br><br>
-               <object data="assets/imgs/CalibratedStyleSpeech.svg" width="600" height="600" class="center"> </object>
                <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">In this article, we propose Calib-StyleSpeech, a novel end-to-end Text-to-Speech (TTS) system, which achieves a Zero-shot learning approach in cloning a new voice without using the meta-learning method. Our model uses a block to extract the style from the reference mel-spectrogram, embedding this style vector into the acoustic model to condition the hidden features. And then, training it with a multi-speaker dataset that still contains noise and resonant utterances. We also extract a content vector from this mel-spectrogram simultaneously with the style vector. This vector will imitate the hidden vector extracted from the phoneme sequence by the encoder of the acoustic model. The extracted content vector takes responsibility on calibrate the style vector by the Mutual Information (MI) constraint in order to eliminate the dependency between content and style representation space. Calib-StyleSpeech can synthesize a high fidelity voice with only 36 utterances (about 3 minutes) in training data. Furthermore, the experimental results prove that model can learn to speak in a new voice with only one small reference record (about 5 seconds) of the target voice without any fine-tune stage and get a competitive similarity score with another state-of-the-art while maintaining naturalness and intelligence.</p>
                <br><br>
                
