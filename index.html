@@ -104,9 +104,40 @@
                <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> Calib-StyleSpeech model is considered. In this section we show the result of our proposed model after 400k training steps on seen voice.</p>
                <br>
                <p><b style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Text:</b> <span class="text_e2e">Here are the match lineups for the Colombia Haiti match.</span></p>
-               <audio controls=""> <source src="assets/test/50.wav"> </audio>
+               <audio controls=""> <source src="assets/seen_samples/Anhvn_818_Anh_1337_6.wav"> </audio>
                <br>
-               <img src="assets/imgs/reverse_diffusion.gif" width="600px" class="center">
+               <img src="assets/seen_samples/Anhvn_818_Anh_1337_6.png" width="600px" class="center">
+               <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">Speed Controllable</h2>
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> The smaller speed ratio the faster utterance</p>
+               <br>
+               <table style="margin-left:auto;margin-right:auto;">
+                  <tbody>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap><b>Text:</b></td>
+                        <td><span class="text_e2e">Chúng tôi cũng đề xuất một mô đun có khả năng căn chỉnh thông tin giọng nói nhờ véc tơ nội dung này</span></td>
+                        <td><span class="text_e2e">Chỉ với một đoạn âm thanh khoảng 5 giây của giọng nói mong muốn</span></td>
+                        <td><span class="text_e2e">Giọng nói này có điểm tương đồng với giọng nói thật khá cao</span></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Speed ratio = 1.1</td>
+                        <td align="center"> <audio controls=""> <source src="assets/speed_controllable/Anh_1.1/ref_Anh_9.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/speed_controllable/Anh_1.1/ref_Anh_13.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/speed_controllable/Anh_1.1/ref_Anh_15.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Speed ratio = 0.7</td>
+                        <td align="center"> <audio controls=""> <source src="assets/speed_controllable/Anh_0.7/ref_Anh_9.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/speed_controllable/Anh_0.7/ref_Anh_13.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/speed_controllable/Anh_0.7/ref_Anh_15.wav"> </audio> </td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" nowrap>Speed ratio = 1.5</td>
+                        <td align="center"> <audio controls=""> <source src="assets/speed_controllable/Anh_1.5/ref_Anh_9.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/speed_controllable/Anh_1.5/ref_Anh_13.wav"> </audio> </td>
+                        <td align="center"> <audio controls=""> <source src="assets/speed_controllable/Anh_1.5/ref_Anh_15.wav"> </audio> </td>
+                     </tr>
+                  </tbody>
+               </table>
                <table style="margin-left:auto;margin-right:auto;" align="center">
                   <tbody>
                      <tr>
