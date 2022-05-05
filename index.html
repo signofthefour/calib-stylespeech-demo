@@ -82,7 +82,6 @@
       <table style="margin-left:auto;margin-right:auto;">
       <tbody>
          <tr>
-            <td>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</td>
             <td>
                <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Paper on Arxiv:</b> <a href="comming soon">comming soon</a>.</p>
                <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Official open-sourced implementation:</b> <a href="https://github.com/signofthefour/calibstylespeech">"signofthefour/calibstylespeech"</a>.</p>
@@ -90,8 +89,11 @@
 
                <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> <a href="https://github.com/jik876/hifi-gan">HiFi-GAN</a> is used as vocoder. We trained this HiFi-GAN with our dataset of 2 standard voice for TTS for 425000 steps. Also, listen to the audios using headphones for better experience.</p>
                <br>
-
-               <object data="assets/imgs/CalibratedStyleSpeech.svg" width="600" height="600" class="center"> </object>
+               <table style="margin-left:auto;margin-right:auto;" align="center">
+                  <td><object data="assets/imgs/MI_learning_module.svg" width="300" height="300" class="center"> </object></td>
+                  <td><object data="assets/imgs/CalibratedMethod.svg" width="300" height="300" class="center"> </object></td>
+                  <td><object data="assets/imgs/CalibratedStyleSpeech.svg" width="300" height="300" class="center"> </object></td>
+               </table>
                <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">Abstract</h2>
                
                <p style="color:rgb(161, 161, 161); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Voiced by our Calib-StyleSpeech model using HiFi-GAN vocoder:</p>
@@ -107,9 +109,55 @@
                <audio controls=""> <source src="assets/seen_samples/Anhvn_818_Anh_1337_6.wav"> </audio>
                <br>
                <img src="assets/seen_samples/Anhvn_818_Anh_1337_6.png" width="600px" class="center">
+               <br>
+               
+               <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">Seen voice during training</h2>
+               <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note: </b> Female voice appear at training time but the utterance is unseen</p>
+               <table style="margin-left:auto;margin-right:auto;" align="center">
+                  <tbody>
+                     <tr>
+                        <td style="text-align: left; color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Text</b></td>
+                        <td style="text-align: center; color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" align="center"><b>Mel-spectrogram</b></td>
+                        <td style="text-align: center; color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" align="center"><b>Groundtruth audio</b></td>
+                        <td style="text-align: center; color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" align="center"><b>Calib-StyleSpeech + HiFi-GAN</b></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Ông cho rằng sự chuyển động của các vật thể trên mặt đất và các vật thể trên bầu trời bị chi phối bởi các định luật tự nhiên giống nhau.</td>
+                        <td align="center"><img src="assets/seen_samples/mel/2-Anhvn-10317-Anh.png" width="300px"></td>
+                        <td align="center"> <audio controls=""> <source src="assets/seen_samples/gt/2-Anhvn-10317-Anh.wav"> </audio></td>
+                        <td align="center"> <audio controls=""> <source src="assets/seen_samples/synth/2-Anhvn-10317-Anh.wav"> </audio></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Một số người cho rằng có thể Ma Kết quá phô trường khi bày tỏ tình cảm rầm rộ</td>
+                        <td align="center"><img src="assets/seen_samples/mel/22-Yenvn-9408-Yen.png" width="300px"></td>
+                        <td align="center"> <audio controls=""> <source src="assets/seen_samples/gt/22-Yenvn-9408-Yen.wav"> </audio></td>
+                        <td align="center"> <audio controls=""> <source src="assets/seen_samples/synth/22-Yenvn-9408-Yen.wav"> </audio></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Sau khi học nghề người lao động phải sống được bằng nghề đã được học</td>
+                        <td align="center"><img src="assets/seen_samples/mel/1026-v1385-310163d13b2c5d-2b1d-4fa8-9624-4e149d7969e2.png" width="300px"></td>
+                        <td align="center"> <audio controls=""> <source src="assets/seen_samples/gt/1026-v1385-310163d13b2c5d-2b1d-4fa8-9624-4e149d7969e2.wav"> </audio></td>
+                        <td align="center"> <audio controls=""> <source src="assets/seen_samples/synth/1026-v1385-310163d13b2c5d-2b1d-4fa8-9624-4e149d7969e2.wav"> </audio></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Đang được điều trị tích cực</td>
+                        <td align="center"><img src="assets/seen_samples/mel/1058-o713-892082514809B-B941-4999-8E10-99D6BF89106F.png" width="300px"></td>
+                        <td align="center"> <audio controls=""> <source src="assets/seen_samples/gt/1058-o713-892082514809B-B941-4999-8E10-99D6BF89106F.wav"> </audio></td>
+                        <td align="center"> <audio controls=""> <source src="assets/seen_samples/synth/1058-o713-892082514809B-B941-4999-8E10-99D6BF89106F.wav"> </audio></td>
+                     </tr>
+                     <tr>
+                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Hai thí sinh đình chỉ một trăm hai mươi ba thí sinh</td>
+                        <td align="center"><img src="assets/seen_samples/mel/1167-v1537-368002B0FDFAD2-09F9-4A80-A42A-EFF21D3FB186.png" width="300px"></td>
+                        <td align="center"> <audio controls=""> <source src="assets/seen_samples/gt/1167-v1537-368002B0FDFAD2-09F9-4A80-A42A-EFF21D3FB186.wav"> </audio></td>
+                        <td align="center"> <audio controls=""> <source src="assets/seen_samples/synth/1167-v1537-368002B0FDFAD2-09F9-4A80-A42A-EFF21D3FB186.wav"> </audio></td>
+                     </tr>
+                  </tbody>
+               </table>
+               
+
                <h2 style="color:#123693; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: x-large">Speed Controllable</h2>
                <p style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Note:</b> The smaller speed ratio the faster utterance</p>
-               <br>
+
                <table style="margin-left:auto;margin-right:auto;">
                   <tbody>
                      <tr>
@@ -135,50 +183,6 @@
                         <td align="center"> <audio controls=""> <source src="assets/speed_controllable/Anh_1.5/ref_Anh_9.wav"> </audio> </td>
                         <td align="center"> <audio controls=""> <source src="assets/speed_controllable/Anh_1.5/ref_Anh_13.wav"> </audio> </td>
                         <td align="center"> <audio controls=""> <source src="assets/speed_controllable/Anh_1.5/ref_Anh_15.wav"> </audio> </td>
-                     </tr>
-                  </tbody>
-               </table>
-               <table style="margin-left:auto;margin-right:auto;" align="center">
-                  <tbody>
-                     <tr>
-                        <td style="text-align: left; color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Decoder state</b></td>
-                        <td style="text-align: center; color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" align="center"><b>Mel-spectrogram sample</b></td>
-                        <td style="text-align: center; color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" align="center"><b>Vocoded audio</b></td>
-                     </tr>
-                     <tr>
-                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Encoder outputs (mean of terminal distribution)</td>
-                        <td align="center"><img src="assets/test/enc.png" width="400px"></td>
-                        <td align="center"><audio controls=""> <source src="assets/test/enc.wav"> </audio></td>
-                     </tr>
-                     <tr>
-                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">After sampling from terminal distribution</td>
-                        <td align="center"><img src="assets/test/0.png" width="400px"></td>
-                        <td align="center"><audio controls=""> <source src="assets/test/0.wav"> </audio></td>
-                     </tr>
-                     <tr>
-                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">After 10 iterations</td>
-                        <td align="center"><img src="assets/test/10.png" width="400px"></td>
-                        <td align="center"><audio controls=""> <source src="assets/test/10.wav"> </audio></td>
-                     </tr>
-                     <tr>
-                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">After 20 iterations</td>
-                        <td align="center"><img src="assets/test/20.png" width="400px"></td>
-                        <td align="center"><audio controls=""> <source src="assets/test/20.wav"> </audio></td>
-                     </tr>
-                     <tr>
-                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">After 30 iterations</td>
-                        <td align="center"><img src="assets/test/30.png" width="400px"></td>
-                        <td align="center"><audio controls=""> <source src="assets/test/30.wav"> </audio></td>
-                     </tr>
-                     <tr>
-                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">After 40 iterations</td>
-                        <td align="center"><img src="assets/test/40.png" width="400px"></td>
-                        <td align="center"><audio controls=""> <source src="assets/test/40.wav"> </audio></td>
-                     </tr>
-                     <tr>
-                        <td style="color:rgb(22, 22, 97); font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">After 50 iterations</td>
-                        <td align="center"><img src="assets/test/50.png" width="400px"></td>
-                        <td align="center"><audio controls=""> <source src="assets/test/50.wav"> </audio></td>
                      </tr>
                   </tbody>
                </table>
@@ -372,8 +376,6 @@
             <br>
             </td>
             <br>
-
-            <td>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</td>
          </tr>
       </tbody>
       </table>
